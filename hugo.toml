@@ -1,4 +1,8 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://willvan.github.io/quikckstart/'
 locale = 'en-us'
 title = 'My New Hugo Project'
 theme = 'ananke'
+
+[caches]
+	[caches.images]
+		dir = ':cacheDir/images'
