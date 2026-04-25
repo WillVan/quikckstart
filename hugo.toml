@@ -3,6 +3,20 @@ locale = 'en-us'
 title = 'My New Hugo Project'
 theme = 'ananke'
 
+[params]
+	custom_css = ['css/custom.css']
+
 [caches]
 	[caches.images]
 		dir = ':cacheDir/images'
+
+[[menu.main]]
+	name = 'Home'
+	pageRef = '/'
+	weight = 1
+
+[[menu.main]]
+	name = 'Posts'
+	pageRef = '/posts'
+	identifier = 'posts'
+	weight = 2

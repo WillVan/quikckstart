@@ -1,0 +1,27 @@
+.ananke-nav-item {
+  position: relative;
+}
+
+.ananke-submenu {
+  display: none;
+  min-width: 16rem;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 1000;
+}
+
+@media screen and (min-width: 30em) {
+  .ananke-nav-item:hover > .ananke-submenu,
+  .ananke-nav-item:focus-within > .ananke-submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 29.999em) {
+  .ananke-submenu {
+    display: block;
+    padding-top: 0.5rem;
+  }
+}
