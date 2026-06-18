@@ -1,0 +1,30 @@
+{
+  "name": "quikckstart",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": "..",
+    "args": {
+      "GO_VERSION": "1.26.1",
+      "NODE_VERSION": "24.14.1",
+      "HUGO_VERSION": "0.160.0",
+      "DART_SASS_VERSION": "1.99.0"
+    }
+  },
+  "forwardPorts": [1313],
+  "portsAttributes": {
+    "1313": {
+      "label": "Hugo dev server",
+      "onAutoForward": "notify"
+    }
+  },
+  "postCreateCommand": "git submodule update --init --recursive",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "budparr.language-hugo-vscode",
+        "davidanson.vscode-markdownlint"
+      ]
+    }
+  },
+  "remoteUser": "vscode"
+}
